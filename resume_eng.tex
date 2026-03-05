@@ -1,0 +1,148 @@
+% Document class and basic packages
+\documentclass[a4paper]{article}
+
+% Essential packages
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
+\usepackage[left=2cm, right=2cm, top=2cm]{geometry}
+\usepackage{longtable}
+
+% Document settings
+\textheight=10in
+\pagestyle{empty}
+\raggedright
+
+% Custom commands
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex}
+
+\newcommand{\area}[2]{
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder}{
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header}[1]{
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer}[3]{
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact}[3]{
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses}[4]{
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school}[4]{
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+
+% Begin document
+\begin{document}
+    \vspace*{-40pt}
+
+    % Header section
+    \vspace*{-2pt}
+    \begin{center}
+        {\Huge \scshape {Isaque Carlos da Silva Melo}}\\
+        \vspace*{2pt}
+        \ {Web Developer}\\
+        \vspace*{2pt}
+        \href{mailto:isaquecaralos2016@gmail.com}{isaquecaralos2016@gmail.com} | \href{tel:+55 11 67136275}{+55 11 67136275}\\
+        \vspace*{4pt}
+        \textbf{\href{linkedin.com/in/isaquecarlos}{LinkedIn | }}\textbf{\href{github.com/IsaqueCarlos28}{GitHub | }}
+    \end{center}
+
+    % Summary section
+    \header{Summary}
+    \vspace{2mm}
+    Web Developer focused on React.js, Laravel, and Spring Boot, with experience in REST APIs, MySQL, SQLite, and Git/GitHub. Knowledge of UX/UI Design and prototyping with Figma, with an understanding of both development and interface design. Currently studying Internet Systems Technology (SENAC) and seeking an opportunity as a Junior Web Developer or Web Development Intern.
+    \vspace{2mm}
+
+    % Experience section
+    \header{Experience}
+    \vspace{2mm}
+
+       \textbf{Casas Bahia}\textbf{ | Apprentice} \hfill  Oct 2025 - Jan 2026\\
+    \vspace{-3mm}
+   \begin{itemize} \itemsep -3pt
+    \item Worked in a high-demand environment with a focus on problem-solving.
+    \item Developed communication, organization, and teamwork skills.
+    \item Supported internal processes while following company standards and deadlines.
+\end{itemize}
+
+    % Projects section
+    \header{Projects}
+    \vspace{2mm}
+
+    \textbf{SENAC Library}\text{ | Web System / Academic E-commerce} \hfill  Dec 2025\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Technologies: Laravel, PHP, SQLite, MVC, Figma
+        \item Developed a web system for library collection management with full CRUD operations using Laravel and MVC architecture.
+    \end{itemize}
+
+    % Skills section
+    \header{Skills}
+    \vspace{2mm}
+    \begin{longtable}{p{4cm}p{12cm}}
+        Programming Languages: & Java, PHP \\
+        Frontend: & React \\
+        Frameworks: & Laravel, Spring Boot \\
+        Databases: & MySQL, SQLite\\
+        Design: & Figma
+    \end{longtable}
+
+    % Education section
+    \header{Education}
+    \vspace{2mm}
+    \textbf{Centro Universitário Senac}\hfill São Paulo, Brazil\\
+    Technology Degree in Internet Systems (In Progress) \hfill Aug 2024 - Dec 2026\\
+    \vspace{3mm}
+
+	% Courses and certificates section
+    \header{Courses and Certifications}
+    \vspace{2mm}
+    \textbf{Senai Suíço-Brasileiro}\hfill São Paulo, Brazil\\
+    UX and UI Design \hfill Feb 2026\\
+    \vspace{1mm}
+    \textbf{Centro Universitário Senac}\hfill São Paulo, Brazil\\
+    Web Developer \hfill Dec 2025\\
+    \vspace{1mm}
+    \textbf{Senai Suíço-Brasileiro}\hfill São Paulo, Brazil\\
+    JavaScript Development \hfill Dec 2025\\
+    \vspace{1mm}
+    \textbf{EF SET}\hfill São Paulo, Brazil\\
+    English Certificate — C1 Advanced \hfill Apr 2025\\
+
+\end{document}
