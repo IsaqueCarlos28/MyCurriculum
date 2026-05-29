@@ -26,6 +26,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: Curriculo_Isaque_Melo_Dev.tex
+          compiler: pdflatex
 
       # =========================
       # Compile General Resume
@@ -35,6 +36,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: Curriculo_Isaque_Melo.tex
+          compiler: pdflatex
 
       # =========================
       # Upload PDFs
