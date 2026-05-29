@@ -1,156 +1,189 @@
+% =========================
+% CURRICULUM - ISAQUE
+% =========================
 
-% Document class and basic packages
 \documentclass[a4paper]{article}
 
-% Essential packages
-\usepackage{fullpage}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{textcomp}
+% =========================
+% Packages
+% =========================
+
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[hidelinks]{hyperref}
-\usepackage[left=2cm, right=2cm, top=2cm]{geometry}
-\usepackage{longtable}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{array}
 
-% Document settings
-\textheight=10in
+% =========================
+% Page Setup
+% =========================
+
+\geometry{
+    left=1cm,
+    right=1.5cm,
+    top=1.5cm,
+    bottom=1cm
+}
+
 \pagestyle{empty}
 \raggedright
+\setlength{\parskip}{2pt}
+\renewcommand{\arraystretch}{1.15}
 
-% Custom commands
-\def\bull{\vrule height 0.8ex width .7ex depth -.1ex}
+% =========================
+% Custom Commands
+% =========================
 
-\newcommand{\area}[2]{
-    \vspace*{-9pt}
-    \begin{verse}
-        \textbf{#1}   #2
-    \end{verse}
-}
+\newcommand{\header}[1]{ \vspace{4mm} {\large\textsc{#1}} \vspace{1mm} \hrule \vspace{2mm} }
 
-\newcommand{\lineunder}{
-    \vspace*{-8pt} \\
-    \hspace*{-18pt} \hrulefill \\
-}
+% =========================
+% Begin Document
+% =========================
 
-\newcommand{\header}[1]{
-    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
-    \vspace*{-6pt} \lineunder
-}
-
-\newcommand{\employer}[3]{
-    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
-}
-
-\newcommand{\contact}[3]{
-    \vspace*{-10pt}
-    \begin{center}
-        {\Huge \scshape {#1}}\\
-        #2 \\ #3
-    \end{center}
-    \vspace*{-8pt}
-}
-
-\newenvironment{achievements}{
-    \begin{list}
-        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
-    \end{list}
-}
-
-\newcommand{\schoolwithcourses}[4]{
-    \textbf{#1} #2 $\bullet$ #3\\
-    #4 \\
-    \vspace*{5pt}
-}
-
-\newcommand{\school}[4]{
-    \textbf{#1} #2 $\bullet$ #3\\
-    #4 \\
-}
-
-% Begin document
 \begin{document}
-    \vspace*{-40pt}
 
-    % Header section
-    \vspace*{-2pt}
-    \begin{center}
-        {\Huge \scshape {Isaque Carlos da Silva Melo}}\\
-        \vspace*{2pt}
-        \ \ {\Large{Desenvolvedor Web}}\\
-    \end{center}
+% =========================
+% Header
+% =========================
 
-    \vspace*{2pt}
-    \href{mailto:isaquecaralos2016@gmail.com}{E-mail: isaquecaralos2016@gmail.com} | \href{tel:+55 11 67136275}{tel: +55 11 67136275}\\
-    \vspace*{2pt}
-    {\href{linkedin.com/in/isaquecarlos}{LinkedIn: linkedin.com/in/isaquecarlos | }}{\href{github.com/IsaqueCarlos28}{GitHub: github.com/IsaqueCarlos28}}
-    \vspace*{2mm}
+\begin{center}
+    {\Huge \scshape Isaque Carlos da Silva Melo}\\
+    \vspace{4pt}
+    {\Large Desenvolvedor Full-Stack}
+\end{center}
 
-    % Summary section
-    \header{Resumo}
-    \vspace{2mm}
-    Desenvolvedor Web especializado em React, Laravel e Spring Boot, com experiência no desenvolvimento de aplicações web full-stack e APIs REST. Forte base em JavaScript, Java e PHP, com conhecimento em modelagem de banco de dados e prototipação UX/UI utilizando Figma. Atualmente cursando Tecnologia em Sistemas para Internet no SENAC e buscando uma oportunidade de estágio em Desenvolvimento Web para aplicar e desenvolver habilidades em desenvolvimento full-stack.
-    \vspace{2mm}
+\vspace{3mm}
 
-    % Experience section
-    \header{Experiência}
-    \vspace{2mm}
+\href{mailto:isaquecaralos2016@gmail.com}{isaquecaralos2016@gmail.com}
+\,|\, 
+\href{tel:+551167136275}{+55 11 6713-6275}
+\,|\, 
+São Paulo - SP
 
-    \textbf{Casas Bahia}\textbf{ | Aprendiz} \hfill Out 2025 - Jan 2026\\
-    \vspace{-2mm}
-    \begin{itemize} \itemsep -3pt
-    \item Atuou em ambiente de varejo dinâmico, atendendo alta demanda de clientes.
+\\
+
+\href{https://linkedin.com/in/isaquecarlos}{linkedin.com/in/isaquecarlos}
+\,|\, 
+\href{https://github.com/IsaqueCarlos28}{github.com/IsaqueCarlos28}
+
+% =========================
+% Summary
+% =========================
+
+\header{Resumo}
+
+Desenvolvedor Full-Stack com experiência em desenvolvimento de APIs RESTful e aplicações mobile utilizando Spring Boot, Kotlin e MySQL. Possui conhecimento em arquitetura MVVM, integração de APIs e modelagem de banco de dados. Atualmente cursando Sistemas para Internet no SENAC.
+
+
+% =========================
+% Skills
+% =========================
+
+\header{Habilidades}
+
+\begin{tabular}{p{4cm} p{11cm}}
+
+Linguagens: & Java, JavaScript \\
+
+Frontend: & HTML, CSS, React \\
+
+Backend: & Spring Boot, RESTful APIs \\
+
+Mobile: & Kotlin, Android Studio \\
+
+Arquitetura:& MVVM, Layered Architecture, DDD (conceitos iniciais) \\
+
+Bancos de Dados: & MySQL, SQLite \\
+
+Ferramentas: & Git, GitHub, Figma \\
+
+\end{tabular}
+
+% =========================
+% Projects
+% =========================
+
+\header{Projetos}
+
+\textbf{Music Playlist API} | Sistema Web Backend | \href{https://github.com/IsaqueCarlos28/Music_Playlist_API}{Repositório} | \href{https://music-playlist-api-kkmt.onrender.com}{Demo} \hfill 2026
+
+
+
+\textit{Tecnologias: Java, Spring Boot, MySQL, RESTful API, Swagger, Git, GitHub, Render}
+
+\begin{itemize}[leftmargin=*, nosep]
+    \item Desenvolveu API RESTful para gerenciamento de playlists utilizando Spring Boot e MySQL
+    \item Implementou operações CRUD, modelagem relacional e documentação com Swagger/OpenAPI
+    \item Realizou deployment da aplicação utilizando Render e GitHub Pages
+    \item Utilizou Git e GitHub para versionamento e gerenciamento do projeto
+\end{itemize}
+
+\vspace{3mm}
+
+\textbf{MinhaSaúde} | Aplicativo Mobile + Backend Web | \href{https://github.com/IsaqueCarlos28/PI_MinhaSaude}{Repositório} \hfill 2026
+
+\textit{Tecnologias: Kotlin, Android Studio, Java, Spring Boot, MySQL, RESTful API, Git, GitHub}
+
+\begin{itemize}[leftmargin=*, nosep]
+    \item Desenvolveu aplicação mobile para gerenciamento de consultas médicas utilizando Kotlin e Android Studio
+    \item Implementou integração com API RESTful desenvolvida em Spring Boot e persistência em MySQL
+    \item Aplicou arquitetura MVVM, Retrofit e RecyclerView no desenvolvimento da aplicação
+    \item Desenvolveu funcionalidades de autenticação, agendamento e gerenciamento de usuários
+    \item Desenvolveu integração com API de e-mail para envio automatizado de notificações e validação de contas
+\end{itemize}
+
+% =========================
+% Experience
+% =========================
+
+\header{Experiência}
+
+\textbf{Casas Bahia} | Aprendiz \hfill Out 2025 -- Jan 2026
+
+\begin{itemize}[leftmargin=*, nosep]
+    \item Atuou em ambiente de varejo dinâmico, atendendo alta demanda de clientes
     \item Desenvolveu habilidades de organização e resolução de problemas
     \item Colaborou com membros da equipe para manter a eficiência operacional
-    \end{itemize}
+\end{itemize}
 
-    % Projects section
-    \header{Projetos}
-    \vspace{2mm}
+% =========================
+% Education
+% =========================
 
-    \textbf{Biblioteca SENAC} | Sistema Web / E-commerce Acadêmico \hfill Dez 2025\\
-    \vspace{-2mm}
-    \begin{itemize} \itemsep -3pt
-    \item Desenvolveu uma plataforma de gerenciamento de biblioteca \\
-    utilizando Laravel (MVC), PHP e SQLite
-    \item Implementou APIs RESTful com operações CRUD para\\
-    livros, usuários e gerenciamento de empréstimos
-    \item Projetou o esquema relacional do banco de dados e otimizou consultas
-    \item Desenvolveu protótipos de interface no Figma antes da implementação
-    \item Gerenciou controle de versão utilizando Git e GitHub
-    \end{itemize}
+\header{Educação}
 
-    % Skills section
-    \header{Habilidades}
-    \vspace{2mm}
-    \begin{longtable}{p{4cm}p{12cm}}
-    Linguagens: & Java, JavaScript, PHP \\
-    Frontend: & React, HTML, CSS \\
-    Backend: & Laravel, Spring Boot \\
-    Bancos de Dados: & MySQL, SQLite\\
-    Ferramentas: & Git, GitHub, Figma
-    \end{longtable}
+\textbf{Centro Universitário Senac} \hfill São Paulo, Brasil
 
-    % Education section
-    \header{Educação}
-    \vspace{2mm}
-    \textbf{Centro Universitário Senac}\hfill São Paulo, Brasil\\
-    Tecnólogo em Sistemas para Internet (Em andamento) \hfill Ago 2024 - Dez 2026\\
-    \vspace{3mm}
+Tecnólogo em Sistemas para Internet (Em andamento) \hfill Ago 2024 -- Dez 2026
 
-    % Courses and certificates section
-    \header{Cursos e Certificações}
-    \vspace{2mm}
-    \textbf{Senai Suíço-Brasileiro}\hfill São Paulo, Brasil\\
-    UX e UI Design \hfill Fev 2026\\
-    \vspace{1mm}
-    \textbf{Centro Universitário Senac}\hfill São Paulo, Brasil\\
-    Desenvolvedor Web \hfill Dez 2025\\
-    \vspace{1mm}
-    \textbf{Senai Suíço-Brasileiro}\hfill São Paulo, Brasil\\
-    Desenvolvimento JavaScript \hfill Dez 2025\\
-    \vspace{1mm}
-    \textbf{EF SET}\hfill São Paulo, Brasil\\
-    Certificado de Inglês — C1 Avançado \hfill Abr 2025\\
+% =========================
+% Certifications
+% =========================
+
+\header{Cursos e Certificações}
+
+\textbf{Senai Suíço-Brasileiro} \hfill São Paulo, Brasil
+
+UX e UI Design \hfill Fev 2026
+
+\vspace{1mm}
+
+\textbf{Centro Universitário Senac} \hfill São Paulo, Brasil
+
+Desenvolvedor Web \hfill Dez 2025
+
+\vspace{1mm}
+
+\textbf{Senai Suíço-Brasileiro} \hfill São Paulo, Brasil
+
+Desenvolvimento JavaScript \hfill Dez 2025
+
+\vspace{1mm}
+
+\textbf{EF SET} \hfill Online
+
+Certificado de Inglês --- C1 Avançado \hfill Abr 2025
 
 \end{document}
+```
