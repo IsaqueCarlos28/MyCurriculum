@@ -1,155 +1,168 @@
-% Document class and basic packages
+% =========================
+% CURRÍCULO GERAL - ISAQUE
+% =========================
+
 \documentclass[a4paper]{article}
 
-% Essential packages
-\usepackage{fullpage}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{textcomp}
+% =========================
+% Packages
+% =========================
+
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[hidelinks]{hyperref}
-\usepackage[left=2cm, right=2cm, top=2cm]{geometry}
-\usepackage{longtable}
+\usepackage{geometry}
+\usepackage{enumitem}
 
-% Document settings
-\textheight=10in
+% =========================
+% Layout
+% =========================
+
+\geometry{
+    left=1.5cm,
+    right=1.5cm,
+    top=1.5cm,
+    bottom=1.5cm
+}
+
 \pagestyle{empty}
 \raggedright
+\setlength{\parskip}{2pt}
 
-% Custom commands
-\def\bull{\vrule height 0.8ex width .7ex depth -.1ex}
-
-\newcommand{\area}[2]{
-    \vspace*{-9pt}
-    \begin{verse}
-        \textbf{#1}   #2
-    \end{verse}
-}
-
-\newcommand{\lineunder}{
-    \vspace*{-8pt} \\
-    \hspace*{-18pt} \hrulefill \\
-}
+% =========================
+% Commands
+% =========================
 
 \newcommand{\header}[1]{
-    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
-    \vspace*{-6pt} \lineunder
+    \vspace{4mm}
+    {\large\textsc{#1}}
+    
+    \vspace{1mm}
+    \hrule
+    
+    \vspace{2mm}
 }
 
-\newcommand{\employer}[3]{
-    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
-}
+% =========================
+% Begin Document
+% =========================
 
-\newcommand{\contact}[3]{
-    \vspace*{-10pt}
-    \begin{center}
-        {\Huge \scshape {#1}}\\
-        #2 \\ #3
-    \end{center}
-    \vspace*{-8pt}
-}
-
-\newenvironment{achievements}{
-    \begin{list}
-        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
-    \end{list}
-}
-
-\newcommand{\schoolwithcourses}[4]{
-    \textbf{#1} #2 $\bullet$ #3\\
-    #4 \\
-    \vspace*{5pt}
-}
-
-\newcommand{\school}[4]{
-    \textbf{#1} #2 $\bullet$ #3\\
-    #4 \\
-}
-
-% Begin document
 \begin{document}
-    \vspace*{-40pt}
 
-    % Header section
-    \vspace*{-2pt}
-    % Header section
-    \vspace*{-2pt}
-    \begin{center}
-        {\Huge \scshape {Isaque Carlos da Silva Melo}}\\
-        \vspace*{2pt}
-        \ \ {\Large{Web Developer}}\\
-    \end{center}
+% =========================
+% Header
+% =========================
 
-    \vspace*{2pt}
-    \href{mailto:isaquecaralos2016@gmail.com}{E-mail: isaquecaralos2016@gmail.com} | \href{tel:+55 11 67136275}{tel: +55 11 67136275}\\
-    \vspace*{2pt}
-    {\href{linkedin.com/in/isaquecarlos}{LinkedIn: linkedin.com/in/isaquecarlos | }}{\href{github.com/IsaqueCarlos28}{GitHub: github.com/IsaqueCarlos28}}
-    \vspace*{2mm}
+\begin{center}
+    {\Huge \scshape Isaque Carlos da Silva Melo}\\
+    \vspace{4pt}
+    {\Large Estudante de Tecnologia}
+\end{center}
 
-    % Summary section
-    \header{Summary}
-    \vspace{2mm}
-    Web Developer specializing in React, Laravel, and Spring Boot with experience building full-stack web applications and REST APIs. Strong foundation in JavaScript, Java, and PHP, with knowledge of database design and UX/UI prototyping using Figma. Currently pursuing a Technology Degree in Internet Systems at SENAC to apply and further develop full-stack web development skills.
-    \vspace{2mm}
+\vspace{3mm}
 
-    % Experience section
-    \header{Experience}
-    \vspace{2mm}
+\href{mailto:isaquecaralos2016@gmail.com}{isaquecaralos2016@gmail.com}
+\,|\, 
+\href{tel:+551167136275}{+55 11 6713-6275}
+\,|\, 
+São Paulo - SP
 
-       \textbf{Casas Bahia}\textbf{ | Apprentice} \hfill  Oct 2025 - Jan 2026\\
-    \vspace{-3mm}
-   \begin{itemize} \itemsep -3pt
-    \item Worked in a fast-paced retail environment serving high customer demand
-    \item Improved organizational and problem-solving skills
-    \item Collaborated with team members to maintain operational efficiency
+\\
+
+\href{https://linkedin.com/in/isaquecarlos}{linkedin.com/in/isaquecarlos}
+\,|\, 
+\href{https://github.com/IsaqueCarlos28}{github.com/IsaqueCarlos28}
+
+% =========================
+% Objective
+% =========================
+
+\header{Objetivo}
+
+Atuar em uma oportunidade que permita desenvolver habilidades profissionais, contribuir com a equipe e adquirir experiência no mercado de trabalho.
+
+% =========================
+% Summary
+% =========================
+
+\header{Resumo}
+
+Estudante de Sistemas para Internet no SENAC, com perfil organizado, proativo e facilidade para aprendizado. Possui experiência em atendimento ao público, trabalho em equipe, suporte técnico e resolução de problemas em ambiente dinâmico.
+
+% =========================
+% Experience
+% =========================
+
+\header{Experiência}
+
+\textbf{Casas Bahia} | Aprendiz
+\hfill Out 2025 -- Jan 2026
+
+\begin{itemize}[leftmargin=*, itemsep=1pt]
+    \item Atuou em ambiente de varejo com atendimento ao público e suporte operacional
+    \item Desenvolveu habilidades de organização, comunicação e resolução de problemas
+    \item Colaborou com a equipe para manter a eficiência das operações diárias
 \end{itemize}
 
-    % Projects section
-    \header{Projects}
-    \vspace{2mm}
+% =========================
+% Volunteer Work
+% =========================
 
-    \textbf{SENAC Library}\ | Web System / Academic E-commerce \hfill  Dec 2025\\
-    \vspace{-3mm}
-    \begin{itemize} \itemsep -3pt
-        \item Built a library management platform using Laravel (MVC), PHP, and SQLite
-        \item Implemented RESTful CRUD APIs for books, users, and loan management
-        \item Designed relational database schema and optimized queries
-        \item Developed UI prototypes in Figma before implementation
-        \item Used Git and GitHub for version control and collaborative development.
-    \end{itemize}
+\header{Trabalho Voluntário}
 
-    % Skills section
-    \header{Skills}
-    \vspace{2mm}
-    \begin{longtable}{p{4cm}p{12cm}}
-        Programming Languages: & Java, JavaScript, PHP \\
-        Frontend: & React, HTML, CSS \\
-        Backend: & Laravel, Spring Boot \\
-        Databases: & MySQL, SQLite\\
-        Tools: & Git, GitHub, Figma
-    \end{longtable}
+\textbf{Operação de Mídia e Suporte Técnico}
 
-    % Education section
-    \header{Education}
-    \vspace{2mm}
-    \textbf{Centro Universitário Senac}\hfill São Paulo, Brazil\\
-    Technology Degree in Internet Systems (In Progress) \hfill Aug 2024 - Dec 2026\\
-    \vspace{3mm}
+\begin{itemize}[leftmargin=*, itemsep=1pt]
+    \item Operação de sistemas de projeção e gerenciamento de mídia para apresentações ao vivo
+    \item Administração do software Holyrics para exibição de textos, imagens, vídeos e materiais multimídia
+    \item Controle e gerenciamento de reprodução de áudio durante eventos
+    \item Suporte técnico em transmissões ao vivo no YouTube
+    \item Auxílio na organização, manutenção e preparação de equipamentos de informática e mídia
+\end{itemize}
 
-	% Courses and certificates section
-    \header{Courses and Certifications}
-    \vspace{2mm}
-    \textbf{Senai Suíço-Brasileiro}\hfill São Paulo, Brazil\\
-    UX and UI Design \hfill Feb 2026\\
-    \vspace{1mm}
-    \textbf{Centro Universitário Senac}\hfill São Paulo, Brazil\\
-    Web Developer \hfill Dec 2025\\
-    \vspace{1mm}
-    \textbf{Senai Suíço-Brasileiro}\hfill São Paulo, Brazil\\
-    JavaScript Development \hfill Dec 2025\\
-    \vspace{1mm}
-    \textbf{EF SET}\hfill São Paulo, Brazil\\
-    English Certificate — C1 Advanced \hfill Apr 2025\\
+% =========================
+% Education
+% =========================
+
+\header{Educação}
+
+\textbf{Centro Universitário Senac}
+\hfill São Paulo, Brasil
+
+Tecnólogo em Sistemas para Internet (Em andamento)
+\hfill Ago 2024 -- Dez 2026
+
+% =========================
+% Skills
+% =========================
+
+\header{Habilidades}
+
+\begin{itemize}[leftmargin=*, itemsep=1pt]
+    \item Comunicação e trabalho em equipe
+    \item Organização e responsabilidade
+    \item Facilidade de aprendizado
+    \item Conhecimento em informática
+    \item Pacote Office básico/intermediário
+    \item Inglês avançado (C1)
+\end{itemize}
+
+% =========================
+% Courses
+% =========================
+
+\header{Cursos e Certificações}
+
+\textbf{Senai Suíço-Brasileiro}
+\hfill UX e UI Design
+
+\textbf{Centro Universitário Senac}
+\hfill Desenvolvedor Web
+
+\textbf{Senai Suíço-Brasileiro}
+\hfill Desenvolvimento JavaScript
+
+\textbf{EF SET}
+\hfill Inglês C1 Avançado
 
 \end{document}
