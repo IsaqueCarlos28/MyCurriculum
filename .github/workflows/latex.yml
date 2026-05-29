@@ -1,0 +1,64 @@
+name: Compile LaTeX CVs
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '*.pdf'
+
+permissions:
+  contents: write
+
+jobs:
+  build-latex:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # =========================
+      # Compile Technical Resume
+      # =========================
+
+      - name: Compile Technical Resume
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: Curriculo_Isaque_Melo_Dev.tex
+
+      # =========================
+      # Compile General Resume
+      # =========================
+
+      - name: Compile General Resume
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: Curriculo_Isaque_Melo.tex
+
+      # =========================
+      # Upload PDFs
+      # =========================
+
+      - name: Upload PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: resumes-pdf
+          path: |
+            Curriculo_Isaque_Melo_Dev.pdf
+            Curriculo_Isaque_Melo.pdf
+
+      # =========================
+      # Commit PDFs
+      # =========================
+
+      - name: Commit PDFs
+        run: |
+          git config --local user.name "github-actions"
+          git config --local user.email "actions@github.com"
+
+          git add *.pdf
+
+          git commit -m "Auto-update PDFs" || echo "No changes"
+
+          git push
